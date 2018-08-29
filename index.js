@@ -5,8 +5,8 @@ let passengerId = 0;
 let tripId = 0;
 
 class Driver {
-  constructor(n) {
-    this.n = n;
+  constructor(name) {
+    this.name = name;
     this.id = driverId++;
     store.drivers.push(this);
   }
@@ -32,6 +32,7 @@ class Passenger {
   trips() {
     return store.trips.filter(trip => {
       return trip.passengerId == this.id;
+      console.log('the trips that a pasenger has taken');
     });
   }
   drivers() {
